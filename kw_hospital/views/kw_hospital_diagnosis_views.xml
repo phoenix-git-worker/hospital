@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem
+        id="kw_hospital_diagnosis_menu"
+        name="diagnosis"
+        action="kw_hospital_diagnosis_act_window"
+        parent="kw_hospital_main_menu"
+        sequence="0"/>
+
+</odoo>

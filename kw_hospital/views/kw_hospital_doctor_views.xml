@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="kw_hospital_doctor_action" model="ir.actions.act_window">
+        <field name="name">Doctor</field>
+        <field name="res_model">kw.hospital.doctor</field>
+        <field name="view_mode">tree,form,kanban</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create and manage Hospital Doctors.
+            </p>
+        </field>
+    </record>
+
+    <record id="kw_hospital_doctor_view_tree" model="ir.ui.view">
+        <field name="name">kw.hospital.doctor.view.tree</field>
+        <field name="model">kw.hospital.doctor</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="kw_name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="kw_hospital_doctor_view_form" model="ir.ui.view">
+        <field name="name">kw.hospital.doctor.view.form</field>
+        <field name="model">kw.hospital.doctor</field>
+        <field name="arch" type="xml">
+            <form >
+                <sheet>
+                    <group>
+                        <field name="kw_name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="kw_hospital_doctor_view_kanban" model="ir.ui.view">
+        <field name="name">kw.hospital.doctor.view.kanban</field>
+        <field name="model">kw.hospital.doctor</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                    <t t-name="kanban-box">
+                        <h4><field name="kw_name" /></h4>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <menuitem
+        id="kw_hospital_doctor_menu"
+        name="Doctor"
+        action="kw_hospital_doctor_action"
+        parent="kw_hospital_main_menu"
+        sequence="0"/>
+
+</odoo>
